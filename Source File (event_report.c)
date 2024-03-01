@@ -1,0 +1,28 @@
+Source File (event_report.c)
+// event_report.c
+
+#include "event_report.h"
+#include <stdio.h>
+
+// Function to handle the event report (replace with actual storage or transmission logic)
+void storeOrSendEventReport(EventType type, EventSeverity severity, const char *location) {
+    // Placeholder for actual implementation (e.g., storing in memory, sending over a network)
+    // This is where you would implement the logic based on the requirements.
+
+    // For now, let's print the event details to simulate the action
+    // This might be replaced with your actual storage or transmission code.
+    printf("Event Report:\n");
+    printf("  Type: %d\n", type);
+    printf("  Severity: %d\n", severity);
+    printf("  Location: %s\n", location);
+    printf("\n");
+}
+
+// Example usage in your code
+int main() {
+    // Simulate an event by calling generateEventReport
+    generateEventReport(EVENT_TYPE_CRITICAL_ERROR, EVENT_SEVERITY_HIGH, "FunctionA");
+
+    // Continue with the rest of your code
+    return 0;
+}
