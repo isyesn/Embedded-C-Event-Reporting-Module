@@ -1,0 +1,35 @@
+Header File (event_report.h)
+// event_report.h
+
+#ifndef EVENT_REPORT_H
+#define EVENT_REPORT_H
+
+#include <stdint.h>
+#include <stddef.h>
+
+// Define event severity levels
+typedef enum {
+    EVENT_SEVERITY_LOW,
+    EVENT_SEVERITY_MEDIUM,
+    EVENT_SEVERITY_HIGH
+} EventSeverity;
+
+// Define event types
+typedef enum {
+    EVENT_TYPE_NULL_ARGUMENT,
+    EVENT_TYPE_CRITICAL_ERROR,
+    EVENT_TYPE_QUEUE_FULL
+    // Add more event types as needed
+} EventType;
+
+// Structure to hold event information
+typedef struct {
+    EventType type;
+    EventSeverity severity;
+    const char *location;
+} EventReport;
+
+// Function to generate an event report
+void generateEventReport(EventType type, EventSeverity severity, const char *location);
+
+#endif /* EVENT_REPORT_H */
